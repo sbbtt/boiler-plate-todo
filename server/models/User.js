@@ -78,7 +78,7 @@ userSchema.statics.findByToken = function(token, cb){
         //클라이언트에서 가져온 토큰과 DB에 보관된 토큰이 일치하는 지 확인
         user.findOne({"_id": decoded, "token": token}, function(err, user){
             if(err) return cb(err);
-            cb(nulll, user)
+            cb(null, user)
         })
     })
 }
